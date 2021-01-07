@@ -1,7 +1,7 @@
 import Form from "../Form";
 
 const MovieContainer=()=>{
-    return <Form subject="movie"/>
+    return <Form subject="Movie"/>
 }
 
 export default MovieContainer;

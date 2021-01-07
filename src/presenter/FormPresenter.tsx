@@ -1,38 +1,41 @@
 import React from 'react';
+import Helmet from "react-helmet";
 import styled from 'styled-components';
-
+import {IApiForm} from "../types/formtypes";
 
 const onSend=()=>{
   alert("Clicked");
 }
 
-const FormPresenter=()=>{
+const FormPresenter=({title, url}:IApiForm)=>{
     return (
-      <Wrapper>
-        <Subject>Subject</Subject>
-        <Container>
-            <Title>Title</Title>
-            <Btn onClick={onSend}>Send</Btn>
-            {true &&  <Error>Status : Error</Error>}
-            <Url>www.naver.com</Url>
-            {true && <ResultArea>123</ResultArea>}
-        </Container>
-      </Wrapper>
+      <>
+        <WhiteSpace/>
+        <Wrapper>
+          <Container>
+              <Title>{title}</Title>
+              <Btn onClick={onSend}>Send</Btn>
+              {true &&  <Error>Status : Error</Error>}
+              <Url>{url}</Url>
+              {true && <ResultArea>123</ResultArea>}
+          </Container>
+        </Wrapper>
+      </>
     )
 }
 
-const Wrapper = styled.div`
-  width : 70%;
-  padding : 15px;
+const WhiteSpace = styled.div`
+  width : 300px;
+  height : 600px;
 `;
 
-const Subject = styled.h1`
-  font-size : 32px;
-  font-weight : 400;
-  width : 100%;
-  display : block;
-  height : auto;
+const Wrapper = styled.div`
+  width : 100vw-300px;
+  padding : 15px;
+  height : 600px;
 `;
+
+
 
 const Container = styled.div`
   width : 600px;
@@ -59,18 +62,16 @@ const Btn = styled.button`
   }
 `;
 
-const Url = styled.p`
+const Url = styled.div`
   width : 100%;
-  height : auto;
-  font-size : 16px;
+  height : 50px;
+  font-size : 14px;
   background-color : #eee;
   margin : 10px 0;
   padding : 7px 5px;
   color : #888;
   overflow-x : auto;
-  &:hover {
-    color : #a2bdeb;
-  }
+  white-space : nowrap;
 `;
 
 const Error = styled.div`

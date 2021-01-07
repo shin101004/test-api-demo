@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Header from "./Header";
+import Sidebar from "./Sidebar";
 import Movie from "../container/movie";
 
 interface RouteProps {
@@ -13,10 +13,10 @@ const Routes:React.FC=()=>{
     return (
         <Router>
             <Container>
-                <Header/>
-                <Switch>
-                    <Route path="/" component={Movie} exact />
-                </Switch>
+                <Sidebar/>
+                    <Switch>
+                        <Route path="/" component={Movie} exact />
+                    </Switch>
             </Container>
         </Router>
     )

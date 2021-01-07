@@ -2,7 +2,6 @@ import React from 'react';
 import { Router } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 import reset from "styled-reset";
-import Header from './components/Header';
 import Routes from "./components/Routes";
 import GlobalStyle from "./components/GlobalStyle";
 
