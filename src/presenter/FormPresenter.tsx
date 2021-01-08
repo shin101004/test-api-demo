@@ -11,15 +11,13 @@ const FormPresenter=({title, url}:IApiForm)=>{
     return (
       <>
         <WhiteSpace/>
-        <Wrapper>
-          <Container>
+        <Container>
               <Title>{title}</Title>
               <Btn onClick={onSend}>Send</Btn>
               {true &&  <Error>Status : Error</Error>}
               <Url>{url}</Url>
               {true && <ResultArea>123</ResultArea>}
-          </Container>
-        </Wrapper>
+        </Container>
       </>
     )
 }
@@ -29,22 +27,15 @@ const WhiteSpace = styled.div`
   height : 600px;
 `;
 
-const Wrapper = styled.div`
-  width : 100vw-300px;
-  padding : 15px;
-  height : 600px;
-`;
-
-
-
 const Container = styled.div`
-  width : 600px;
+  width : calc(100% - 300px);
   height : 600px;
   margin : 10px 0;
+  padding : 10px;
 `;
 
 const Title = styled.h2`
-  width : 90%;
+  width : calc(50% - 60px);
   display : inline-block;
   font-size : 20px;
 `;
@@ -63,7 +54,7 @@ const Btn = styled.button`
 `;
 
 const Url = styled.div`
-  width : 100%;
+  width : 50%;
   height : 50px;
   font-size : 14px;
   background-color : #eee;
@@ -83,6 +74,7 @@ const ResultArea = styled.div`
   border : 1px solid black;
   overflow-y : auto;
   padding : 5px;
+  width : 50%;
 `;
 
 export default FormPresenter;
