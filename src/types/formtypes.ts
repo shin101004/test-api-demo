@@ -1,9 +1,10 @@
-export interface IApiForm {
-  title ?: string;
-  status ?: string;
-  url ?: string;
-  result ?: object;
-  onClick ?: object
+export interface IForm {
+  title : string;
+  url : string;
+  result : any|any[];
+  onClick : (url:string)=> void;
+  loading : boolean;
+  name : string;
 }
 
 export type TSubject = {

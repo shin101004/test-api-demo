@@ -1,22 +1,21 @@
 import React from 'react';
 import Helmet from "react-helmet";
 import styled from 'styled-components';
-import {IApiForm} from "../types/formtypes";
+import {IForm} from "../types/formtypes";
 
-const onSend=()=>{
-  alert("Clicked");
-}
-
-const FormPresenter=({title, url}:IApiForm)=>{
+const FormPresenter=({title, url, onClick, loading, result, name}:IForm) => {
     return (
       <>
         <WhiteSpace/>
         <Container>
               <Title>{title}</Title>
-              <Btn onClick={onSend}>Send</Btn>
-              {true &&  <Error>Status : Error</Error>}
-              <Url>{url}</Url>
-              {true && <ResultArea>123</ResultArea>}
+              <Btn onClick={()=>onClick(url)}>Send</Btn>
+              <Url><span>{url}</span></Url>
+              <ResultArea>
+                <pre>
+                  <code>{!loading && <>{result}</> }</code>
+                </pre>
+              </ResultArea>
         </Container>
       </>
     )
@@ -48,6 +47,7 @@ const Btn = styled.button`
   background-color : yellowgreen;
   border : none;
   border-radius : 16px;
+    cursor : pointer;
   &:hover {
     color : white;
   }
@@ -55,18 +55,20 @@ const Btn = styled.button`
 
 const Url = styled.div`
   width : 50%;
-  height : 50px;
-  font-size : 14px;
+  height : 45px;
+  font-size : 12px;
   background-color : #eee;
   margin : 10px 0;
-  padding : 7px 5px;
+  padding : 7px;
   color : #888;
   overflow-x : auto;
   white-space : nowrap;
+  display : flex;
+  align-items : center;
 `;
 
 const Error = styled.div`
-  
+  background-color : red;
 `;
 
 
@@ -75,6 +77,7 @@ const ResultArea = styled.div`
   overflow-y : auto;
   padding : 5px;
   width : 50%;
+  height : 80%;
 `;
 
 export default FormPresenter;
