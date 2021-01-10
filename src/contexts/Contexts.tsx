@@ -12,5 +12,7 @@ export const MovieData:datalist = [
 ]
 
 export const TvData = [
-  {title:'', url:''}
+  {title:'Top Rated', url:'https://api.themoviedb.org/3/tv/top_rated?api_key=9a735f45eff9846b9afeee748729ddaf&language=en-US&page=1'},
+  {title:'Popular', url:'https://api.themoviedb.org/3/tv/popular?api_key=9a735f45eff9846b9afeee748729ddaf&language=en-US&page=1'},
+  {title:'Airing Today', url:'https://api.themoviedb.org/3/tv/airing_today?api_key=9a735f45eff9846b9afeee748729ddaf&language=en-US&page=1'},
 ]

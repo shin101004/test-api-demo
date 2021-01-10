@@ -2,7 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Sidebar from "./Sidebar";
-import Movie from "../container/movie";
+import Movie from "container/movie";
+import Tv from "container/tv";
 
 interface RouteProps {
     path : string;
@@ -16,6 +17,7 @@ const Routes:React.FC=()=>{
                 <Sidebar/>
                     <Switch>
                         <Route path="/" component={Movie} exact />
+                        <Route path="/tv" component={Tv} exact />
                     </Switch>
             </Container>
         </Router>

@@ -14,7 +14,7 @@ const PageList = ()=>{
                 <Link to="/">
                     <List>Movie</List>
                 </Link>
-                <Link to="/">
+                <Link to="/tv">
                     <List>TV</List>
                 </Link>
                 <Link to="/">
@@ -27,7 +27,7 @@ const PageList = ()=>{
 
 const Container = styled.div`
     width : 100%;
-    height : 880px;
+    height : calc(100% - 10vh);
 `;
 
 const UList = styled.ul`
@@ -45,7 +45,11 @@ const List = styled.li`
     margin-bottom : 15px;
     color : rgba(255,255,255);
     font-weight : 400;
+    font-size : 20px;
     cursor : pointer;
+    &:hover {
+        color : rgba(150,150,150);
+    }
 `;
 
 export default PageList;

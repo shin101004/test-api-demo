@@ -4,7 +4,6 @@ export interface IForm {
   result : any|any[];
   onClick : (url:string)=> void;
   loading : boolean;
-  name : string;
 }
 
 export type TSubject = {
