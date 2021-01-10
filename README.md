@@ -1,7 +1,7 @@
 # API TEST PAGE
 
 ### Tabel of Contents
-[1.Directory](#Directory)
+[1.Directory](#Directory)<br/>
 [2.How to use](#How-to-use)
 
 ## Directory
