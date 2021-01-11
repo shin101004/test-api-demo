@@ -16,13 +16,6 @@ const FormPresenter=({title, url, onClick, loading, result}:IForm) => {
               <Button onClick={onClick} url={url}/>
               <Url url={url}/>
               <ResultArea loading={loading} result={result} />
-              {/* <Btn onClick={()=>onClick(url)}>Send</Btn>
-              <Url><span>{url}</span></Url>
-              <ResultArea>
-                <pre>
-                  <code>{!loading && <>{result}</> }</code>
-                </pre>
-              </ResultArea> */}
         </Container>
       </>
     )
