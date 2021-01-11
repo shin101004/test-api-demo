@@ -2,8 +2,8 @@
 
 ### 🗂Tabel of Contents
 
-[1.Directory](#Directory)<br/>
-[2.How to use](#How-to-use)
+[1.Directory](#-directory)<br/>
+[2.How to use](#-how-to-use)
 
 ## 📔 Directory
 
