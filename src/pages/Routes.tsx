@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Sidebar from "./Sidebar";
+import Sidebar from "components/Sidebar";
 import Movie from "container/movie";
 import Tv from "container/tv";
 

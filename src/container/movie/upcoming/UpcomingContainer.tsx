@@ -1,7 +1,7 @@
-import { MovieData } from 'contexts/Contexts';
+import { MovieData } from 'modules/contexts/Contexts';
 import React, { useState } from 'react';
-import { formApi } from '../../../api';
-import FormPresenter from '../../../presenter/FormPresenter';
+import { formApi } from 'api';
+import FormPresenter from 'presenter/FormPresenter';
 
 const UpcomingContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
