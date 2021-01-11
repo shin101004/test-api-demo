@@ -70,10 +70,16 @@ API TEST PAGE
 
 1. 정적 데이터 수정<br/>
 - modules/contexts/Contexts.tsx 수정
+
+
 ![스크린샷 2021-01-11 오후 12 15 23](https://user-images.githubusercontent.com/61345090/104144596-278d2d80-5407-11eb-9ac1-b2b0723c1ec1.png)<br/>
 - components/PageList.tsx 수정
+
+
 ![스크린샷 2021-01-11 오후 12 15 40](https://user-images.githubusercontent.com/61345090/104144598-28be5a80-5407-11eb-8d15-fee36e0a861c.png)<br/>
 - pages/Route.tsx 수정
+
+
 ![스크린샷 2021-01-11 오후 12 15 52](https://user-images.githubusercontent.com/61345090/104144599-29ef8780-5407-11eb-96f2-5c85799a55dd.png)
 <br/>
 
