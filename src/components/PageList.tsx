@@ -7,7 +7,6 @@ const handleClick=(e:any)=>{
 }
 
 const PageList = ()=>{
-    const [open, setOpen]=useState<boolean>(false);
     return (
         <Container>
             <UList>

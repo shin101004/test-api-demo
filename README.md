@@ -70,14 +70,15 @@ API TEST PAGE
 
 1. 정적 데이터 수정
 
-■ Contexts.tsx 안의 정적 데이터들을 수정
+<!-- ■ Contexts.tsx 안의 정적 데이터들을 수정
 
 
 ​	■ components/PageList.tsx안의 리스트 데이터 수정
 
 
 
-​	■ pages/Route.tsx 안의 라우팅 수정
+​	■ pages/Route.tsx 안의 라우팅 수정 -->
+
 
 
 
