@@ -9,10 +9,10 @@ const Sidebar=()=>{
             <Aside/>
             <Wrapper>
                 <Link to="/">
-                    <Title>NANOBOOK</Title>
+                    <Title>API TEMPLATE</Title>
                 </Link>
                 <PageList/>
-                <Footer>I <Red>♥️</Red> NANOBOOK</Footer>
+                <Footer>I <Red>♥️</Red> Tangoo</Footer>
             </Wrapper>
         </Container>
     )
@@ -51,12 +51,6 @@ const Title = styled.span`
     text-align : left;
     display : inline-block;
     padding : 10px 10px;
-    &::after {
-        content : 'API';
-        color : white;
-        font-size : 16px;
-        padding-left : 10px;
-    }
 `;
 
 const Footer = styled.div`

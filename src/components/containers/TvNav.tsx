@@ -25,7 +25,7 @@ const UList = styled.ul`
   display : inline-block;
   position : fixed;
   top : 50px;
-  left : 1200px;
+  left : 1100px;
   border : 1px solid black;
   border-radius : 16px;
   text-align : center;

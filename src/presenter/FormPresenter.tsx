@@ -1,10 +1,10 @@
-import Button from 'components/Button';
-import ResultArea from 'components/ResultArea';
-import Url from 'components/Url';
+import Button from 'components/containers/Button';
+import ResultArea from 'components/containers/ResultArea';
+import Url from 'components/containers/Url';
 import React from 'react';
 import Helmet from "react-helmet";
 import styled from 'styled-components';
-import Title from '../components/Title';
+import Title from '../components/containers/Title';
 import {IForm} from "../types/formtypes";
 
 const FormPresenter=({title, url, onClick, loading, result}:IForm) => {

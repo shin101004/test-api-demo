@@ -25,7 +25,7 @@ const UList = styled.ul`
   display : inline-block;
   position : fixed;
   top : 50px;
-  left : 1200px;
+  left : 1100px;
   border : 1px solid black;
   border-radius : 16px;
   text-align : center;
@@ -43,10 +43,11 @@ const List = styled.li`
   display : flex;
   align-items : center;
   justify-content : center;
+  letter-spacing : 2px;
   cursor : pointer;
-  color : rgba(200,200,200);
+  color : white;
   &:hover {
-    background-color : rgba(0,0,0,0.5);
+    color : rgba(100,200,255,0.7);
   }
 `;
 
