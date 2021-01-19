@@ -1,7 +1,6 @@
 import { TvData } from 'modules/contexts/Contexts';
 import React, { useState } from 'react';
 import { formApi } from 'api';
-import FormPresenter from 'presenter/FormPresenter';
 
 const TopratedContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,11 +18,7 @@ const TopratedContainer = () => {
   }
     
     return (
-      <FormPresenter title={TvData[0].title}
-                    url={TvData[0].url}
-                    onClick={handleOnClick}
-                    loading={isLoading}
-                    result={result} />
+      <div></div>
     )
 }
 

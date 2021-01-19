@@ -35,7 +35,6 @@ API TEST PAGE
     │  └─ Button.tsx
     │  └─ GlobalStyle.tsx
     │  └─ Header.tsx
-    │  └─ MovieNav.tsx
     │  └─ PageList.tsx
     │  └─ ResultArea.tsx
     │  └─ Sidebar.tsx

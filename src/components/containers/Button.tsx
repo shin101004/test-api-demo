@@ -2,13 +2,12 @@ import React from "react";
 import styled from 'styled-components';
 
 interface IButton {
-  onClick : (link:string)=>void;
-  url : string;
+  onClick : ()=>void;
 }
 
-const Button = ({onClick, url}:IButton) => {
+const Button = ({onClick}:IButton) => {
   return (
-    <Btn onClick={()=>onClick(url)}>Send</Btn>
+    <Btn onClick={onClick}>Send</Btn>
   );
 }
 

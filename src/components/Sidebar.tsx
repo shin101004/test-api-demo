@@ -36,6 +36,7 @@ const Aside = styled.div`
 const Wrapper = styled.div`
     width : 90%;
     height : 100%;
+    position: relative;
     &>a {
         width : 100%;
         height : 40px;
@@ -60,6 +61,8 @@ const Footer = styled.div`
     padding : 10px 0;
     color : white;
     text-align : center;
+    position: absolute;
+    top : 90vh;
 `;
 
 const Red = styled.span`

@@ -2,15 +2,14 @@ import React from "react";
 import styled from 'styled-components';
 
 interface IArea {
-  loading : boolean;
   result : string;
 }
 
-const ResultArea = ({loading, result}:IArea) => {
+const ResultArea = ({result}:IArea) => {
   return (
     <Container>
       <pre>
-        <code>{!loading && <>{result}</> }</code>
+        <code>{<>{result}</> }</code>
       </pre>
     </Container>
   )

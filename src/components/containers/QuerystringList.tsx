@@ -16,6 +16,9 @@ const QuerystringList = styled.ul`
     padding : 5px;
     border : none;
   }
+  li>input:focus {
+    outline : none;
+  }
   li>input:nth-child(1) {
     background-color : #fff;
     border-bottom : 1px solid #e3e3e3;

@@ -1,7 +1,6 @@
 import { TvData } from 'modules/contexts/Contexts';
 import React, { useState } from 'react';
 import { formApi } from 'api';
-import FormPresenter from 'presenter/FormPresenter';
 
 const PopularContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,11 +18,7 @@ const PopularContainer = () => {
   }
     
     return (
-      <FormPresenter title={TvData[1].title}
-                    url={TvData[1].url}
-                    onClick={handleOnClick}
-                    loading={isLoading}
-                    result={result} />
+      <div></div>
     )
 }
 

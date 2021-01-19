@@ -9,29 +9,34 @@ import Title from 'components/containers/Title';
 import Button from 'components/containers/Button';
 import Url from 'components/containers/Url';
 import ResultArea from 'components/containers/ResultArea';
-import Language from 'components/containers/nowplaying/Language';
-import Page from 'components/containers/nowplaying/Page';
 import QuerystringList from 'components/containers/QuerystringList';
-
-interface ILink {
-  language : string;
-  page : string;
-}
+import QueryElement from 'components/containers/QueryElement';
 
 const NowPlayContainer = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<any|any[]>(null);
   const [url, setUrl] = useState<string>('https://api.themoviedb.org/3/movie/now_playing?api_key=9a735f45eff9846b9afeee748729ddaf');
-  const [link, setLink] = useState<ILink | any>(null);
-  // &language=en-US&page=1
-
-  const handleOnClick= async(addr:string)=>{
-    // console.log('click');
-    setIsLoading(true);
-    formApi(addr)
+  const [link, setLink] = useState<ILink | any>({
+    language : '',
+    page : ''
+  });
+  const baseUrl = 'https://api.themoviedb.org/3/movie/now_playing?api_key=9a735f45eff9846b9afeee748729ddaf';
+  const queryArray = ['language', 'page'];
+  const handleOnClick = () => {
+    let addUrl = baseUrl;
+    if(link.language!=='') addUrl = addUrl + `&language=${link.language}`;
+    if(link.page!=='') addUrl = addUrl + `&page=${link.page}`;
+    setUrl(addUrl);
+    formApi(addUrl)
     .then(res => {
-      setIsLoading(false);
       setResult(JSON.stringify(res.data.results,null,4));
+    });
+  }
+
+  const onChange = (e:any) => {
+    const {name, value} = e.target;
+    setLink({
+      ...link,
+      [name] : value
     });
   }
 
@@ -40,16 +45,24 @@ const NowPlayContainer = () => {
         <Whitespace />
         <Container>
           <Title title={MovieData[0].title} />
-          <Button onClick={()=>handleOnClick} url={url}/>
+          <Button onClick={handleOnClick} />
           <Url url={url} />
           <QuerystringList>
-            <Language />
-            <Page/>
+            {queryArray.map(data => 
+              <QueryElement data={data} 
+                          onChange={onChange}
+              />
+            )}
           </QuerystringList>
-          <ResultArea loading={isLoading} result={result} />
+          <ResultArea result={result} />
         </Container>
       </>
     )
+}
+
+interface ILink {
+  language : string;
+  page : string;
 }
 
 export default NowPlayContainer;

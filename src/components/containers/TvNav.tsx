@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const MovieNav = () => {
+const TvNav = () => {
   
   const handleClick = (x:number,y:number) => {
     window.scrollTo(x,y);
@@ -50,4 +50,4 @@ const List = styled.li`
   }
 `;
 
-export default MovieNav;
+export default TvNav;
