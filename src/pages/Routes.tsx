@@ -1,16 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+// component
 import Sidebar from "components/Sidebar";
-import Movie from "container/movie";
+// container
+import Movie from 'container/movie/Movie';
 import Tv from "container/tv";
 
-interface RouteProps {
-    path : string;
-    children : React.ReactChild;
-}
-
-const Routes:React.FC=()=>{
+const Routes:React.FC = () => {
     return (
         <Router>
             <Container>

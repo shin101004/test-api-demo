@@ -2,9 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import Helmet from 'react-helmet';
 import {TSubject} from "types/formtypes"
-import TvNav from "./containers/TvNav";
 
-const Header =({subject}:TSubject)=>{
+const Header = ({subject}:TSubject) => {
   return (
     <>
       <Helmet>
@@ -14,7 +13,6 @@ const Header =({subject}:TSubject)=>{
       <Subject>
         {subject}
       </Subject>
-      {subject==='Movie' ? <div> </div>: <TvNav/>}
 
     </>
   )

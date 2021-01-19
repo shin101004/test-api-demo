@@ -1,10 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 
-interface IArea {
-  result : string;
-}
-
 const ResultArea = ({result}:IArea) => {
   return (
     <Container>
@@ -14,6 +10,11 @@ const ResultArea = ({result}:IArea) => {
     </Container>
   )
 }
+
+interface IArea {
+  result : string | any;
+}
+
 
 const Container = styled.div`
   border : 1px solid black;

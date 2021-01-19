@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 import Header from "../../components/Header";
-import NowPlayContainer from "./nowplay/NowPlayContainer";
-import PopularContaner from "./popular/PopularContainer";
-import UpcomingContainer from "./upcoming/UpcomingContainer";
+import NowPlaying from "./nowplay/NowPlaying";
+import Popular from "./popular/Popular";
+import Upcoming from "./upcoming/Upcoming";
 
-const MovieContainer=()=>{
+const Movie = () => {
     const navArray = ['Now Playing', 'Popular', 'Upcoming'];
     const handleClick = (x:number, y:number) => {
         window.scrollTo(x,y);
@@ -17,16 +17,16 @@ const MovieContainer=()=>{
                 <span>M o v i e</span>
                 {navArray.map((data, index) => (
                     <List onClick = {()=> handleClick(100, index * 600)}>{data}</List>
-                ))}()
+                ))}
             </UList>
-            <NowPlayContainer/>
-			      <PopularContaner />
-			      <UpcomingContainer />
+            <NowPlaying />
+			      <Popular />
+			      <Upcoming />
         </>
     )
 }
 
-
+// 리팩토링 해야함
 const UList = styled.ul`
   list-style : none;
   padding : 15px;
@@ -60,4 +60,4 @@ const List = styled.li<{onClick : () => void}>`
   }
 `;
 
-export default MovieContainer;
+export default Movie;

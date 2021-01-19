@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import PageList from "./PageList";
 
-const Sidebar=()=>{
+const Sidebar = () => {
     return (
         <Container>
             <Aside/>
