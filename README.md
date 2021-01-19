@@ -1,4 +1,4 @@
-# API TEST PAGE
+<!-- # API TEST PAGE
 
 ### 🗂Tabel of Contents
 
@@ -85,4 +85,6 @@ API TEST PAGE
 위 3가지 파일은 정적데이터로 이루어져 있기 때문에 알맞게 수정하신 후 사용하시면 되겠습니다.
 
 * 지속해서 업데이트 예정
+ -->
 
+-- 리팩토링 중 --
