@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Sidebar from "components/Sidebar";
 // container
 import Movie from 'container/movie/Movie';
-import Tv from "container/tv";
+import Tv from "container/tv/Tv";
 
 const Routes:React.FC = () => {
     return (

@@ -2,13 +2,12 @@ import { TvData } from 'modules/contexts/Contexts';
 import React, { useState } from 'react';
 import { formApi } from 'api';
 
-const TopratedContainer = () => {
+const Toprated = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<any|any[]>(null);
 
   const handleOnClick= async(addr:string)=>{
     setIsLoading(true);
-    // console.log(addr);
     formApi(addr)
     .then(res => {
       setIsLoading(false);
@@ -22,4 +21,4 @@ const TopratedContainer = () => {
     )
 }
 
-export default TopratedContainer;
+export default Toprated;

@@ -2,7 +2,7 @@ import { TvData } from 'modules/contexts/Contexts';
 import React, { useState } from 'react';
 import { formApi } from 'api';
 
-const PopularContainer = () => {
+const Popular = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<any|any[]>(null);
 
@@ -22,4 +22,4 @@ const PopularContainer = () => {
     )
 }
 
-export default PopularContainer;
+export default Popular;

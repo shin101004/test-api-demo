@@ -13,7 +13,7 @@ import ILink from 'types/movie/interface';
 
 const Popular = () => {
 
-  const [result, setResult] = useState<any|any[]>(null);
+  const [result, setResult] = useState<string | any[]>('');
   const [url, setUrl] = useState<string>('https://api.themoviedb.org/3/movie/popular?api_key=9a735f45eff9846b9afeee748729ddaf');
   const [link, setLink] = useState<ILink | any>({
     language : '',
@@ -42,7 +42,7 @@ const Popular = () => {
   const onChange = (e:any) => {
 
     const {name, value} = e.target;
-    
+
     setLink({
       ...link,
       [name] : value
