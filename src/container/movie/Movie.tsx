@@ -17,7 +17,8 @@ const Movie = () => {
             <Header subject="Movie"/>
             <NavUlist subject="M o v i e">
               {navArray.map((data, index) => (
-                <NavList onClick={()=>handleClick(100,index*600)} 
+                <NavList key={index}
+                        onClick={()=>handleClick(100,index*600)} 
                         data={data}
                 />
               ))}    

@@ -10,7 +10,7 @@ import ResultArea from 'components/containers/ResultArea';
 import QuerystringList from 'components/containers/QuerystringList';
 import QueryElement from 'components/containers/QueryElement';
 // Interface
-import ILink from 'types/movie/interface';
+import ILink from 'types/container/interface';
 
 const NowPlaying = () => {
 
@@ -57,7 +57,8 @@ const NowPlaying = () => {
           <Url url={url} />
           <QuerystringList>
             {queryArray.map(data => 
-              <QueryElement data={data} 
+              <QueryElement key={data}
+                            data={data} 
                             onChange={onChange}
               />
             )}
